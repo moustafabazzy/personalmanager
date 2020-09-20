@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-center align-items-center page-container">
+  <div class="bg-light p-5 border form-container" >
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <h2>Create a New Account</h2>
+      <hr/>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="name" class="form-control" id="name" placeholder="Enter name" formControlName="name">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+      </div>
+
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm_password" placeholder="Password" formControlName="confirmPassword">
+      </div>
+
+      <button type="submit"
+        class="btn btn-sm btn-primary w-100"
+        [disabled]="!registrationForm.valid"
+      >
+        Sign up
+      </button>
+
+    </form>
+  </div>
+</div>
+
