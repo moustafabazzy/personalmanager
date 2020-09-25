@@ -5,13 +5,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavbarComponent,
+    MainNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    AuthenticationModule
+    AuthenticationModule,
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

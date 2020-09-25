@@ -5,6 +5,14 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule),
+    },
+    {
+        path: 'home',
+        loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule),
+    },
+    {
+        path: 'todo',
+        loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule),
     }
 ];
 
