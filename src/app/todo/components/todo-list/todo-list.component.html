@@ -1,3 +1,6 @@
 <div *ngFor="let todo of todoList">
-  <div>{{ todo.description }}</div>
+  <todo-list-item
+    [todo]="todo"
+  >
+  </todo-list-item>
 </div>

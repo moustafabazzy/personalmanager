@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 // Components
 import { TodoContainerComponent } from './container/todo-container.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
+import { TodoConfirmDeleteComponent } from './components/todo-confirm-delete/todo-confirm-delete.component';
 
 // Services
 import { TodoApiService } from './services/api';
@@ -15,7 +17,9 @@ import { TodoApiService } from './services/api';
 @NgModule({
   declarations: [
     TodoContainerComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoListItemComponent,
+    TodoConfirmDeleteComponent
   ],
   imports: [
     CommonModule,
@@ -25,6 +29,7 @@ import { TodoApiService } from './services/api';
     ReactiveFormsModule,
     TodoRoutingModule
   ],
+  entryComponents: [TodoConfirmDeleteComponent],
   providers: [TodoApiService],
 })
 export class TodoModule { }

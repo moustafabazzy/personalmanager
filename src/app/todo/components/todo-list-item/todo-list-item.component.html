@@ -1,0 +1,14 @@
+<div class="d-flex p-1">
+  <input class="form-control description"
+    [value]="todo.description"
+    [readonly]="true"
+  >
+  <button class="btn btn-sm btn-light mr-2 p-1">
+    <fa-icon [icon]="faPen" size="xs" class="icon"></fa-icon>
+  </button>
+
+  <button class="btn btn-sm btn-light p-1" (click)="openDeleteModal()">
+    <fa-icon [icon]="faTrash" size="xs" class="icon"></fa-icon>
+  </button>
+</div>
+
