@@ -38,4 +38,11 @@ export class TodoContainerComponent implements OnInit {
     this.todoList = this.todoService.all();
   }
 
+  deleteTodoItem(todoId: number) {
+    const itemDeleted = this.todoService.remove(todoId);
+    if (itemDeleted) {
+      this.todoList = this.todoList.filter(todo =>  todo.id !== todoId);
+    }
+  }
+
 }

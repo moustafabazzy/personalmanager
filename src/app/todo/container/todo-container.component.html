@@ -14,7 +14,9 @@
     </button>
   </div>
 
-  <todo-list [todoList]="todoList">
-  </todo-list>
+  <todo-list
+    [todoList]="todoList"
+    (onDeleteTodoItem)="deleteTodoItem($event)"
+  ></todo-list>
 
 </div>

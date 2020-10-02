@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -18,6 +18,9 @@ export class TodoListItemComponent implements OnInit {
   @Input()
   todo: Todo;
 
+  @Output()
+  onDeleteItem = new EventEmitter();
+
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -28,7 +31,7 @@ export class TodoListItemComponent implements OnInit {
     modalRef.componentInstance.todo = this.todo;
     modalRef.result.then(
       result => {
-        console.log(result);
+        this.onDeleteItem.emit(this.todo.id);
       },
       reject => {
     });

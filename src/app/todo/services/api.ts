@@ -16,6 +16,7 @@ export class TodoApiService {
 
     todos.push(todo);
     localStorage.setItem('todos', JSON.stringify(todos));
+
     return todo;
   }
 
@@ -27,6 +28,22 @@ export class TodoApiService {
     }
 
     return todos;
+  }
+
+  remove(todoId: number) {
+    let todos = [];
+    if (localStorage.getItem('todos')) {
+      todos = JSON.parse(localStorage.getItem('todos'));
+    }
+
+    if (!todos) {
+      return false;
+    }
+
+    todos = todos.filter(todo => todo.id !== todoId);
+    localStorage.setItem('todos', JSON.stringify(todos));
+
+    return true;
   }
 
 
