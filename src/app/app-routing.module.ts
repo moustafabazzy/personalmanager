@@ -8,11 +8,15 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule),
+        redirectTo: 'todo'
     },
     {
         path: 'todo',
         loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule),
+    },
+    {
+        path: 'pomodoro',
+        loadChildren: () => import('./pomodoro-clock/pomodoro-clock.module').then(m => m.PomodoroClockModule),
     }
 ];
 

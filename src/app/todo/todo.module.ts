@@ -33,4 +33,3 @@ import { TodoApiService } from './services/api';
   providers: [TodoApiService],
 })
 export class TodoModule { }
-

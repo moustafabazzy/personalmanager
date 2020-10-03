@@ -9,11 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { TodoModule } from './todo/todo.module';
+import { PomodoroClockModule } from './pomodoro-clock/pomodoro-clock.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavbarComponent
+    MainNavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,8 @@ import { TodoModule } from './todo/todo.module';
     FormsModule,
     ReactiveFormsModule,
     AuthenticationModule,
-    TodoModule
+    TodoModule,
+    PomodoroClockModule
   ],
   providers: [],
   bootstrap: [AppComponent]

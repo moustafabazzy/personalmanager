@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { TodoContainerComponent } from './container/todo-container.component';
+import { PomodoroClockContainerComponent } from './container/pomodoro-clock-container/pomodoro-clock-container.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: TodoContainerComponent
+        component: PomodoroClockContainerComponent
     },
 ];
 
@@ -15,4 +15,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TodoRoutingModule { }
+export class PomodoroClockRoutingModule { }
+
