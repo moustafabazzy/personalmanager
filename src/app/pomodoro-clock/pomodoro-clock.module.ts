@@ -4,17 +4,19 @@ import { PomodoroClockRoutingModule } from './pomodoro-routing.module';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { CountdownModule } from 'ngx-countdown';
 
 // Components
 import { PomodoroClockContainerComponent } from './container/pomodoro-clock-container/pomodoro-clock-container.component';
 
 @NgModule({
   declarations: [
-    PomodoroClockContainerComponent
+    PomodoroClockContainerComponent,
   ],
   imports: [
     CommonModule,
-    PomodoroClockRoutingModule
+    PomodoroClockRoutingModule,
+    CountdownModule
   ],
   providers: [],
 })

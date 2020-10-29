@@ -9,7 +9,13 @@ export class PomodoroClockContainerComponent implements OnInit {
 
   constructor() { }
 
+  config = { leftTime: 5000 };
+
   ngOnInit(): void {
+  }
+
+  handleEvent(event) {
+    console.log(event);
   }
 
 }
