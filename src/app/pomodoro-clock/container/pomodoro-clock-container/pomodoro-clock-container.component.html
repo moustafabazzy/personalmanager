@@ -1,7 +1,25 @@
-<p>pomodoro-clock works!</p>
-<countdown
-  #cd
-  [config]="config"
-  (event)="handleEvent($event)"
-></countdown>
+<div class="container">
+  <div class="countdown-container">
+    <div>
+      <div class="d-flex justify-content-center">
+        <countdown
+          #cd
+          [config]="config"
+          (event)="handleEvent($event)"
+        ></countdown>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-lg btn-primary m-1" (click)="start(cd)">
+          Start
+        </button>
+        <button class="btn btn-lg btn-danger m-1" (click)="pause(cd)">
+          Pause
+        </button>
+        <button class="btn btn-lg btn-primary m-1" (click)="reset(cd)">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 

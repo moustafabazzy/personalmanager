@@ -1,0 +1,16 @@
+.countdown-container {
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.text-time {
+  font-size: 7rem;
+  font-style: bold;
+}
